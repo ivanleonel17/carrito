@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+
+</head>
+<body>
+  <h1>Bienvenido a la tienda</h1>
+  
+  <!-- Card de producto -->
+  <% products.forEach(product => { %>
+    <div class="product-card">
+      <img src="<%= product.img %>" alt="<%= product.name %>" />
+      <h2><%= product.name %></h2>
+      <p>Precio: $<%= product.price %></p>
+      <a href="/addToCart/<%= product._id %>">Add to Cart</a> <!-- Enlace para añadir al carrito -->
+    </div>
+  <% }); %>
+</body>
+</html>
